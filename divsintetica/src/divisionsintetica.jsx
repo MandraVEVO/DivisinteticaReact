@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Opulento } from "uvcanvas"
+
+
 
 function DivisionSintetica() {
   const [grado, setGrado] = useState("");
@@ -119,11 +122,15 @@ function DivisionSintetica() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center py-10">
-      <div className="bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl">
-        <h1 className="text-2xl font-bold text-blue-600 text-center mb-6">
-          División Sintética
-        </h1>
+    
+    <div className="relative min-h-screen bg-gray-50 flex flex-col items-center py-10">
+    {/* Fondo Opulento que ocupa toda la pantalla */}
+    <Opulento className="fixed top-0 left-0 w-full h-full z-0" />
+
+    {/* Contenedor principal */}
+    <div className="relative z-10 bg-white shadow-lg rounded-lg p-8 w-full max-w-4xl overflow-auto">
+      <h1 className="text-2xl font-bold text-blue-600 text-center mb-6">División Sintética</h1>
+
 
         {/* Grado del Polinomio */}
         <div className="mb-6">
